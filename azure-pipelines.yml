@@ -10,6 +10,8 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-- bash: "sudo apt-get update; sudo apt-get install libboost-all-dev;g++ -std=c++11 -I/usr/include/boost/asio -I/usr/include/boost -o binary.out main.cpp connection.cpp connection_manager.cpp mime_types.cpp reply.cpp request_handler.cpp request_parser.cpp server.cpp -lboost_system -lboost_thread -lpthread;echo ${Build.DefinitionVersion}.${Build.BuildNumber}.$(Build.SourceVersionShort) >> readme.txt"
+- bash: "sudo apt-get update; sudo apt-get install libboost-all-dev;g++ -std=c++11 -I/usr/include/boost/asio -I/usr/include/boost -o binary.out main.cpp connection.cpp connection_manager.cpp mime_types.cpp reply.cpp request_handler.cpp request_parser.cpp server.cpp -lboost_system -lboost_thread -lpthread;echo 1 >> readme.txt"
   displayName: 'realworld'
+- bash: "echo 1>>1"
+  displayName: 'realworld2'
 
